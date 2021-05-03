@@ -1,6 +1,6 @@
 # Angular Application
 
-It is a learning project. It will consists the functionalities related to the frontend part. All those functionalities 
+It is a learning project. It will consist the functionalities related to the frontend part. All those functionalities 
 will be mentioned below in the same order as they are implemented.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.15.
