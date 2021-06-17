@@ -8,6 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Implemented functionalities
 
 - PWA and Service workers.
+- Angular Material (https://material.angular.io/guide/getting-started)
 
 ## Development server
 
