@@ -11,6 +11,7 @@ const routes: Routes = [
 ];
 
 const config: ExtraOptions = {
+  initialNavigation: 'enabled',
   scrollPositionRestoration: 'top',
   onSameUrlNavigation: 'reload',
   anchorScrolling: 'enabled',
