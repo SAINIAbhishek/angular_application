@@ -12,7 +12,7 @@ import { REQUEST, RESPONSE } from '@nguniversal/express-engine/tokens';
 
 enableProdMode();
 
-const port = 4000;
+const port = 3080;
 const server = express();
 const cookieParser = require('cookie-parser');
 const distFolder = join(process.cwd(), 'dist/browser');
