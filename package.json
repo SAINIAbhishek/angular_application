@@ -15,7 +15,7 @@
     "server:webpack": "webpack --config webpack.server.config.js --progress --color",
     "build:ssr": "ng build --prod && npm run build:server",
     "build:server": "ng run angular-application:server:production",
-    "serve:ssr": "node dist/server/main.js",
+    "serve:ssr": "node dist/server",
     "serve:browser": "http-server dist/browser",
     "prerender": "ng run angular-application:prerender",
     "bundle-report": "npm run build:ssr && gzip -k -r dist/browser/ && webpack --config webpack.bundle-stats.config.js"
