@@ -13,10 +13,19 @@ import { lookup } from 'mime-types';
 
 enableProdMode();
 
-const port = 3090;
+const port = 3080;
 const server = express();
 const cookieParser = require('cookie-parser');
 const distFolder = join(process.cwd(), 'dist/browser');
+
+// Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
+// temp fix issues for Angular 9 https://github.com/angular/universal/issues/1210
+server.engine('html', ngExpressEngine({
+  bootstrap: AppServerModule
+}) as any);
+
+server.set('view engine', 'html');
+server.set('views', distFolder);
 
 server.use('*.*', (req, res, next) => {
   const indexParams = req.url.indexOf('?');
@@ -29,15 +38,6 @@ server.use('*.*', (req, res, next) => {
   res.set('Content-Type', lookup(extname(req.originalUrl)) as any);
   next();
 });
-
-// Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
-// temp fix issues for Angular 9 https://github.com/angular/universal/issues/1210
-server.engine('html', ngExpressEngine({
-  bootstrap: AppServerModule
-}) as any);
-
-server.set('view engine', 'html');
-server.set('views', distFolder);
 
 // Example Express Rest API endpoints
 // server.get('/api/**', (req, res) => { });
