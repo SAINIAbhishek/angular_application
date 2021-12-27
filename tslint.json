@@ -141,7 +141,11 @@
     "template-no-negated-async": true,
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
-    "no-trailing-whitespace": false
+    "no-trailing-whitespace": false,
+    "no-object-literal-type-assertion": false,
+    "object-literal-sort-keys": false,
+    "trailing-comma": false,
+    "ordered-imports": false
   },
   "rulesDirectory": [
     "codelyzer"
