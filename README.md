@@ -11,6 +11,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Angular Material (https://material.angular.io/guide/getting-started)
 - Angular Universal (https://angular.io/guide/universal)
 - Webpack
+- Web Caching
 
 ## Development server
 
