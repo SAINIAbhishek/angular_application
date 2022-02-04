@@ -1,6 +1,11 @@
 import 'zone.js/dist/zone-node';
 import 'reflect-metadata';
 
+// hack to let the server forward a cookie in CookieServerInterceptor
+// @ts-ignore
+import * as XHR2 from 'xhr2';
+XHR2.prototype._restrictedHeaders.cookie = false;
+
 import { ngExpressEngine } from '@nguniversal/express-engine';
 
 import * as compression from 'compression';
@@ -74,7 +79,6 @@ export function app() {
       ],
     }, (err, html) => {
       if (err) {
-        // Here we catch the errors, and we send back a generic error message.
         console.error(err);
         res.send('An error occured: ' + err.message);
       }
