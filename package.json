@@ -21,6 +21,7 @@
     "bundle-report": "ng build angular-application -c=production --stats-json && webpack-bundle-analyzer dist/browser/stats-es2015.json"
   },
   "private": true,
+  "license": "ISC",
   "dependencies": {
     "@angular/animations": "~9.1.13",
     "@angular/cdk": "^9.2.4",
