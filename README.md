@@ -12,6 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Angular Universal (https://angular.io/guide/universal)
 - Webpack
 - Web Caching
+- Unit Tests
 
 ## Development server
 
