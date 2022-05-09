@@ -13,6 +13,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Webpack
 - Web Caching
 - Unit Tests
+- Preloading Strategy
+
+## Unit Tests
+
+Run `npm install jest jest-preset-angular @types/jest --save-dev`
 
 ## Development server
 
