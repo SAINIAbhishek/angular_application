@@ -37,6 +37,8 @@
     "@angular/service-worker": "~9.1.13",
     "@nguniversal/express-engine": "^9.1.1",
     "@nguniversal/module-map-ngfactory-loader": "^8.2.6",
+    "@ngx-translate/core": "^12.1.2",
+    "@ngx-translate/http-loader": "^5.0.0",
     "classlist.js": "^1.1.20150312",
     "cookie-parser": "^1.4.5",
     "core-js": "^3.18.0",
