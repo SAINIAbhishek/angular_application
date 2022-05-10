@@ -19,6 +19,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `npm install jest jest-preset-angular @types/jest --save-dev`
 
+## Preloading Strategy
+
+Run `npm i ngx-quicklink --save`
+
+Uses ngx-quicklink. 
+For more info: https://blog.mgechev.com/2018/12/24/quicklink-angular-prefetching-preloading-strategy/
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
