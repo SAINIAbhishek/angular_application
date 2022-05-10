@@ -24,7 +24,6 @@ Run `npm install jest jest-preset-angular @types/jest --save-dev`
 
 Run `npm i ngx-quicklink --save`
 
-Uses ngx-quicklink. 
 For more info: https://blog.mgechev.com/2018/12/24/quicklink-angular-prefetching-preloading-strategy/
 
 ## Development server
