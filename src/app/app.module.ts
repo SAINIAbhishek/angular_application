@@ -10,11 +10,14 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {HeaderModule} from './header/header.module';
 import {QuicklinkModule} from 'ngx-quicklink';
 import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+// import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {MultiTranslateHttpLoader} from 'ngx-translate-multi-http-loader';
+import {TranslateResources} from './translate-resources';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  // return new TranslateHttpLoader(http);
+  return new MultiTranslateHttpLoader(http, TranslateResources);
 }
 
 @NgModule({

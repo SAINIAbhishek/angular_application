@@ -17,11 +17,11 @@
   </span>
   <div class="spacer"></div>
   <button mat-button [matMenuTriggerFor]="langMenu">
-    {{selectedLang === 'fr' ? 'French' : 'English'}} <mat-icon>keyboard_arrow_down</mat-icon>
+    {{('COMMON.LANG.' + selectedLang | uppercase) | translate}} <mat-icon>keyboard_arrow_down</mat-icon>
   </button>
   <mat-menu #langMenu="matMenu" xPosition="before">
-    <button mat-menu-item (click)="changeLang($event, 'en')">English</button>
-    <button mat-menu-item (click)="changeLang($event, 'fr')">French</button>
+    <button mat-menu-item (click)="changeLang($event, 'en')">{{'COMMON.LANG.EN' | translate}}</button>
+    <button mat-menu-item (click)="changeLang($event, 'fr')">{{'COMMON.LANG.FR' | translate}}</button>
   </mat-menu>
   <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
     <svg id="twitter-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">

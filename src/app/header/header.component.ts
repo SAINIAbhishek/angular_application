@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
     return this._selectedLang;
   }
 
-  private _selectedLang = 'en';
+  private _selectedLang = this._translateService.currentLang || 'en';
 
   constructor(private _translateService: TranslateService) { }
 
