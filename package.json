@@ -18,9 +18,10 @@
     "serve:ssr": "node dist/server/main.js",
     "serve:browser": "http-server dist/browser -p=3080",
     "prerender": "ng run angular-application:prerender",
-    "bundle-report": "ng build angular-application -c=production --stats-json && webpack-bundle-analyzer dist/browser/stats-es2015.json"
+    "bundle-report": "ng build angular-application -c=production --stats-json && webpack-bundle-analyzer dist/browser/stats-es2015.json",
+    "i18n:extract": "ng xi18n --output-path assets/i18n",
+    "start:fr": "ng serve --configuration=fr --port=4202 --base-href=/fr/"
   },
-  "private": true,
   "license": "ISC",
   "dependencies": {
     "@angular/animations": "~9.1.13",
@@ -29,6 +30,7 @@
     "@angular/compiler": "~9.1.13",
     "@angular/core": "~9.1.13",
     "@angular/forms": "~9.1.13",
+    "@angular/localize": "^9.1.13",
     "@angular/material": "^9.2.4",
     "@angular/platform-browser": "~9.1.13",
     "@angular/platform-browser-dynamic": "~9.1.13",

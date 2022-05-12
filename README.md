@@ -15,6 +15,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Unit Tests
 - Preloading Strategy
 - Internalization using ngx-translate (https://github.com/ngx-translate/core)
+- Internalization (@angular/localize & i18n)
 
 ## Unit Tests
 

@@ -3,6 +3,10 @@
     "LANG": {
       "FR": "French",
       "EN": "ENGLISH"
+    },
+    "NAVIGATION": {
+      "HOME": "Home",
+      "PRELOAD": "Preload"
     }
   }
 }
