@@ -147,7 +147,8 @@
     "object-literal-sort-keys": false,
     "trailing-comma": false,
     "ordered-imports": false,
-    "member-access": false
+    "member-access": false,
+    "arrow-parens": false
   },
   "rulesDirectory": [
     "codelyzer"
