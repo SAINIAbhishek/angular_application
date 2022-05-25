@@ -6,11 +6,11 @@ import {QuicklinkStrategy} from 'ngx-quicklink';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule)
+    loadChildren: () => import('./modules/home/home.module').then((m) => m.HomeModule)
   },
   {
     path: 'preload',
-    loadChildren: () => import('./preload/preload.module').then((m) => m.PreloadModule)
+    loadChildren: () => import('./modules/preload/preload.module').then((m) => m.PreloadModule)
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];

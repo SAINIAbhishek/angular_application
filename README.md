@@ -17,6 +17,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Internalization using ngx-translate (https://github.com/ngx-translate/core)
 - Internalization (@angular/localize & i18n)
 - Migrate to Angular 10
+- Named and multiple router outlets
 
 ## Unit Tests
 
