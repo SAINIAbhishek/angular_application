@@ -1,23 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import {PreloadRoutingModule} from './preload-routing.module';
-import {PreloadComponent} from './preload.component';
 import {TranslateModule} from '@ngx-translate/core';
+import {CardDetailsComponent} from './card-details.component';
 import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
+import {CardDetailsRoutingModule} from './card-details-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    PreloadRoutingModule,
     TranslateModule.forChild(),
     MatCardModule,
-    MatButtonModule
+    CardDetailsRoutingModule
   ],
   declarations: [
-    PreloadComponent
+    CardDetailsComponent
   ]
 })
 
-export class PreloadModule {}
+export class CardDetailsModule {}

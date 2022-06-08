@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import {PreloadComponent} from './preload.component';
+import {CardDetailsComponent} from './card-details.component';
 
 @NgModule({
   imports: [
     RouterModule.forChild([
       {
         path: '',
-        component: PreloadComponent
+        component: CardDetailsComponent
       }
     ])
   ],
@@ -16,4 +16,4 @@ import {PreloadComponent} from './preload.component';
   ]
 })
 
-export class PreloadRoutingModule {}
+export class CardDetailsRoutingModule {}

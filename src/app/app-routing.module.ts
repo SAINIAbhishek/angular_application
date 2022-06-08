@@ -12,6 +12,11 @@ const routes: Routes = [
     path: 'preload',
     loadChildren: () => import('./modules/preload/preload.module').then((m) => m.PreloadModule)
   },
+  {
+    path: 'card',
+    loadChildren: () => import('./modules/card-details/card-details.module').then((m) => m.CardDetailsModule),
+    outlet: 'selected'
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
