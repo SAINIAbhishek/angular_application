@@ -21,7 +21,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Unit Tests
 
-Run `npm install jest jest-preset-angular @types/jest --save-dev`
+- Remove Jasmine & Karma configuration / packages. 
+- Run `npm install jest jest-preset-angular @types/jest --save-dev`
 
 ## Preloading Strategy
 
