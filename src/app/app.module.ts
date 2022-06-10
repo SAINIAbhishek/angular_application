@@ -13,6 +13,7 @@ import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate
 // import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {MultiTranslateHttpLoader} from 'ngx-translate-multi-http-loader';
 import {TranslateResources} from './translate-resources';
+import {StrengthPipe} from './pipes/strength/strength.pipe';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -22,7 +23,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StrengthPipe
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'angular-app'}),
