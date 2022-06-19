@@ -2,6 +2,16 @@
   flex: 1;
 }
 
+a {
+  font-weight: normal;
+  color: white;
+
+  &:hover {
+    text-decoration: underline !important;
+  }
+
+}
+
 .toolbar {
   position: absolute;
   top: 0;

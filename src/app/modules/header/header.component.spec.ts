@@ -6,6 +6,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {TestModule} from '../../tests/test.module';
 import {TranslateModule} from '@ngx-translate/core';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -18,6 +19,7 @@ describe('HeaderComponent', () => {
         TestModule,
         MatButtonModule,
         MatMenuModule,
+        RouterTestingModule,
         MatIconModule,
         TranslateModule.forChild()
       ]

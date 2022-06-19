@@ -13,6 +13,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/preload/preload.module').then((m) => m.PreloadModule)
   },
   {
+    path: 'posts',
+    loadChildren: () => import('./modules/posts/posts.module').then((m) => m.PostsModule)
+  },
+  {
     path: 'card',
     loadChildren: () => import('./modules/card-details/card-details.module').then((m) => m.CardDetailsModule),
     outlet: 'selected'

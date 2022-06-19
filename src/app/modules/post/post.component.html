@@ -1,0 +1,8 @@
+<div style="display: flex; align-items: center; justify-content: space-between">
+  <h4>
+    <a [routerLink]="['detail', post.id]" style="color: #111111; text-decoration: none;">
+      {{ post.title | titlecase }}
+    </a>
+  </h4>
+  <button mat-raised-button color="warn" (click)="onDeletePost($event)" style="margin-bottom: 16px;">Delete Post</button>
+</div>

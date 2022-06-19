@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
 import {HeaderModule} from './modules/header/header.module';
 import {QuicklinkModule} from 'ngx-quicklink';
 import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
@@ -14,6 +14,8 @@ import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate
 import {MultiTranslateHttpLoader} from 'ngx-translate-multi-http-loader';
 import {TranslateResources} from './translate-resources';
 import {StrengthPipe} from './pipes/strength/strength.pipe';
+import {ToastrModule} from 'ngx-toastr';
+import {ApiUrlInterceptor} from './interceptors/api-url.interceptor';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -35,6 +37,10 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
+    ToastrModule.forRoot({
+      progressAnimation: 'increasing',
+      progressBar: true
+    }),
     BrowserTransferStateModule,
     AppRoutingModule,
     HttpClientModule,
@@ -43,7 +49,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     HeaderModule,
     QuicklinkModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: ApiUrlInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

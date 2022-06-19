@@ -1,0 +1,6 @@
+<div class="content">
+  <h5 style="text-align: center; font-size: 18px;">Total posts: {{posts.length}}</h5>
+  <mat-card *ngFor="let post of posts" class="example-card posts" style="max-width: 740px; width: 100%">
+    <app-post [post]="post" (delete)="deletePost($event)"></app-post>
+  </mat-card>
+</div>

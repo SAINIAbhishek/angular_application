@@ -5,6 +5,7 @@ import {HttpLoaderFactory} from '../app.module';
 import {RouterTestingModule} from '@angular/router/testing';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {ToastrModule} from 'ngx-toastr';
 
 @NgModule({
   imports: [
@@ -14,6 +15,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
+    }),
+    ToastrModule.forRoot({
+      progressAnimation: 'increasing',
+      progressBar: true
     }),
     RouterTestingModule,
     HttpClientTestingModule,
