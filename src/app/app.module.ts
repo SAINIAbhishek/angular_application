@@ -1,5 +1,5 @@
 import {BrowserModule, BrowserTransferStateModule} from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {Inject, NgModule, PLATFORM_ID} from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,7 @@ import {TranslateResources} from './translate-resources';
 import {StrengthPipe} from './pipes/strength/strength.pipe';
 import {ToastrModule} from 'ngx-toastr';
 import {ApiUrlInterceptor} from './interceptors/api-url.interceptor';
+import {isPlatformBrowser} from '@angular/common';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -56,8 +57,15 @@ export function HttpLoaderFactory(http: HttpClient) {
 })
 export class AppModule {
 
-  constructor(private _translateService: TranslateService) {
-    const lang = localStorage.getItem('lang') || 'en';
+  constructor(@Inject(PLATFORM_ID) protected platformId: object,
+              private _translateService: TranslateService) {
+
+    let lang = 'en';
+
+    if (isPlatformBrowser(this.platformId)) {
+      lang = localStorage.getItem('lang') || 'en';
+    }
+
     this._translateService.addLangs(['en', 'fr']);
     this._translateService.setDefaultLang('en');
     this._translateService.use(lang);

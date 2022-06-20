@@ -31,6 +31,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets",
@@ -41,13 +42,7 @@
               "./node_modules/ngx-toastr/toastr.css",
               "src/styles.scss"
             ],
-            "scripts": [],
-            "vendorChunk": false,
-            "extractLicenses": true,
-            "buildOptimizer": true,
-            "sourceMap": true,
-            "optimization": true,
-            "namedChunks": true
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -63,7 +58,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "localize": true,
+              "localize": false,
               "budgets": [
                 {
                   "type": "initial",

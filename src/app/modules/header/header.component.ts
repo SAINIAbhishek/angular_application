@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
+import {isPlatformBrowser} from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -14,16 +15,20 @@ export class HeaderComponent implements OnInit {
 
   private _selectedLang = this._translateService.currentLang || 'en';
 
-  constructor(private _translateService: TranslateService) { }
+  constructor(@Inject(PLATFORM_ID) protected platformId: object,
+              private _translateService: TranslateService) { }
 
   ngOnInit(): void {
   }
 
   public changeLang(event: Event, lang: string) {
     event.preventDefault();
-    this._selectedLang = lang;
-    localStorage.setItem('lang', this._selectedLang);
-    this._translateService.use(this._selectedLang);
+
+    if (isPlatformBrowser(this.platformId)) {
+      this._selectedLang = lang;
+      localStorage.setItem('lang', this._selectedLang);
+      this._translateService.use(this._selectedLang);
+    }
   }
 
 }

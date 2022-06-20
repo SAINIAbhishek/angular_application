@@ -20,6 +20,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Named and multiple router outlets
 - Migrate to Angular 11
 - Migrate tslint to esLint
+- Migrate to Angular 12
 
 ## Unit Tests
 

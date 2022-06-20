@@ -80,7 +80,7 @@ export function app() {
     }, (err, html) => {
       if (err) {
         console.error(err);
-        res.send('An error occured: ' + err.message);
+        res.send('An error occurred: ' + err.message);
       }
       return res.send(html);
     });
