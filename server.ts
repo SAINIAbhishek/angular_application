@@ -1,4 +1,4 @@
-import 'zone.js/dist/zone-node';
+import 'zone.js/node';
 import 'reflect-metadata';
 
 // hack to let the server forward a cookie in CookieServerInterceptor
