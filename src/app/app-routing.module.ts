@@ -31,7 +31,8 @@ const routes: Routes = [
     scrollPositionRestoration: 'top',
     onSameUrlNavigation: 'reload',
     anchorScrolling: 'enabled',
-  })],
+    relativeLinkResolution: 'legacy'
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
