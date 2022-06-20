@@ -23,6 +23,16 @@
     "i18n:extract": "ng xi18n --output-path assets/i18n"
   },
   "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged --relative"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,html}": [
+      "eslint --fix"
+    ]
+  },
   "dependencies": {
     "@angular/animations": "~11.2.14",
     "@angular/cdk": "^11.2.13",
@@ -55,6 +65,11 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.19",
+    "@angular-eslint/builder": "4.3.1",
+    "@angular-eslint/eslint-plugin": "4.3.1",
+    "@angular-eslint/eslint-plugin-template": "4.3.1",
+    "@angular-eslint/schematics": "4.3.1",
+    "@angular-eslint/template-parser": "4.3.1",
     "@angular/cli": "~11.2.19",
     "@angular/compiler-cli": "~11.2.14",
     "@nguniversal/builders": "^9.1.1",
@@ -64,21 +79,27 @@
     "@types/jest": "^27.0.1",
     "@types/mime-types": "^2.1.1",
     "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "4.16.1",
+    "@typescript-eslint/parser": "4.16.1",
     "babel-jest": "^27.1.1",
-    "codelyzer": "^6.0.0",
     "compression": "^1.7.4",
+    "eslint": "^7.6.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.3.2",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "husky": "^8.0.1",
     "http-server": "^0.12.3",
     "jest": "^27.1.1",
     "jest-html-reporter": "^3.1.0",
     "jest-jasmine2": "^27.5.1",
     "jest-preset-angular": "^9.0.7",
     "mime-types": "^2.1.34",
+    "lint-staged": "^13.0.2",
     "protractor": "~7.0.0",
     "sass": "^1.52.3",
     "ts-loader": "^8.2.0",
     "ts-node": "~8.3.0",
-    "tslint": "~6.1.0",
-    "typescript": "4.0.8",
+    "typescript": "4.1.6",
     "webpack": "^4.46.0",
     "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.4.0",
