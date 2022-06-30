@@ -21,6 +21,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Migrate to Angular 11
 - Migrate tslint to esLint
 - Migrate to Angular 12
+- Migrate to Angular 13
 
 ## Unit Tests
 
