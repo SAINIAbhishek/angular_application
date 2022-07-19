@@ -22,6 +22,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Migrate tslint to esLint
 - Migrate to Angular 12
 - Migrate to Angular 13
+- Jest to 28.1.2
 
 ## Unit Tests
 
